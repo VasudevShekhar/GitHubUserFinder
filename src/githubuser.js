@@ -1,7 +1,7 @@
 import useGitHub from "./hooks/useGitHub";
 
 const GitHubUser = ({ username }) => {
-  const [user, loading, error] = useGitHub(username);
+  const [user, loading, error] = useGitHub({ username });
   return (
     <div className="github-user">
       {loading && <p>Loading...</p>}

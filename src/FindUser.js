@@ -22,7 +22,7 @@ const FindUser = () => {
         {userName ? (
           <GitHubUser username={userName} />
         ) : (
-          <p>Please Initiate a Search!!!!</p>
+          <p>Please Initiate a Search !!</p>
         )}
       </div>
     </div>

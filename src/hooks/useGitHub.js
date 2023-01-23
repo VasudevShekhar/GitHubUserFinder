@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const useGitHub = ({ username }) => {
   const [user, setUser] = useState(null);
-  const [error, seterror] = useState(null);
+  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -13,10 +13,11 @@ const useGitHub = ({ username }) => {
           `https://api.github.com/users/${username}`
         );
         const responseData = await response.json();
+
         setUser(responseData);
         setLoading(false);
       } catch (error) {
-        seterror(error);
+        setError(error);
         setLoading(false);
       }
     };
